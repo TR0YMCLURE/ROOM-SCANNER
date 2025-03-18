@@ -39,7 +39,7 @@ function saveToGoogleSheets(roomNumber) {
 
     let timestamp = new Date().toISOString();
 
-    fetch("https://script.google.com/macros/s/YOUR_DEPLOYED_SCRIPT_URL/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbx1eM4qCf2Jp2h26iaan7xzA0Ieouv9uF3KD9ENF6ppYBLNLSQR-y0CQThVgQgAURRG-w/exec", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ room: roomNumber, employee: employee, timestamp: timestamp })

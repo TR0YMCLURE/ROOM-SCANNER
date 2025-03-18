@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Room Check</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.0.0/jsQR.min.js"></script>
+    <script defer src="app.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        video { width: 300px; border: 1px solid #ddd; margin: 10px 0; }
+        button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <h1>Hotel Room Sweep System</h1>
+    
+    <label for="employee">Employee Name:</label>
+    <input type="text" id="employee" placeholder="Enter your name">
+    
+    <h3>Scan QR Code</h3>
+    <video id="camera" autoplay></video>
+    <button onclick="startScanner()">Start Scanner</button>
+    <p id="scan-result"></p>
+    
+    <h3>Room Check Log</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Room Number</th>
+                <th>Employee</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody id="log-table"></tbody>
+    </table>
+
+</body>
+</html>
